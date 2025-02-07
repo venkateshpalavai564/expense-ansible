@@ -6,7 +6,10 @@
     ansible.builtin.pip:
       name: PyMySQL
       state: present
-
+  - name: installing PyMySQL
+    ansible.builtin.pip:
+      name: cryptography
+      state: present
   - name: installing mysql
     ansible.builtin.package:
       name: mysql-server
