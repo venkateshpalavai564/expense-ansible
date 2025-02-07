@@ -11,3 +11,10 @@
       name: mysqld
       state: started
       enabled: yes
+
+  - name:
+    ansible.builtin.command: mysql -h 172.31.23.123 -u root -p ExpenseApp@1
+    register: mysql_fact
+  - name:
+    ansible.builtin.debug:
+      msg: "{{mysql_fact}}"
