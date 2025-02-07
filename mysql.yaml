@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: installing PyMySQL
-    ansible.builtin.package:
+    ansible.builtin.pip:
       name: PyMySQL
       state: installed
 
@@ -11,7 +11,7 @@
     ansible.builtin.package:
       name: mysql-server
       state: installed
-      
+
   - name: start mysql
     ansible.builtin.service:
       name: mysqld
