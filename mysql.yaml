@@ -5,7 +5,7 @@
   - name: installing PyMySQL
     ansible.builtin.pip:
       name: PyMySQL
-      state: installed
+      state: present
 
   - name: installing mysql
     ansible.builtin.package:
