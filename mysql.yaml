@@ -13,8 +13,8 @@
       enabled: yes
 
   - name:
-    ansible.builtin.command: mysql -h 172.31.23.123 -u root -p ExpenseApp@1
-    register: mysql_fact
-  - name:
-    ansible.builtin.debug:
-      msg: "{{mysql_fact}}"
+    community.mysql.mysql_info:
+      login_host: 172.31.23.123
+      login_user: root
+      login_password: ExpenseApp@1
+    register: mysql_n-info
