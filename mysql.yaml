@@ -24,6 +24,7 @@
       login_user: root
       login_password: ExpenseApp@1
     register: mysql_info
+    ignore_error: true
   
   - name: mysql mysql_info
     ansible.builtin.debug:
