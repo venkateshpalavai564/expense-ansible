@@ -8,6 +8,6 @@
       state: installed
   - name: start mysql
     ansible.builtin.service:
-      name: mysql
+      name: mysqld
       state: started
       enable: true
