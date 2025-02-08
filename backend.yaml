@@ -1,5 +1,5 @@
 - name: Backend configuration
-  hosts:  Backend
+  hosts:  backend
   become: yes
   tasks:
   - name: Disabling current nodejs
