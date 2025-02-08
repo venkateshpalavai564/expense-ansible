@@ -12,6 +12,14 @@
     ansible.builtin.package:
       name: nodejs
       state: installed
+
+  - name: installing PyMySQL and cryptography
+    ansible.builtin.pip:
+      name: "{{ item }}"
+      state: present
+    loop:
+    - PyMySQL
+    - cryptography
   
   - name: adding application login_user
     ansible.builtin.user:
