@@ -1,8 +1,0 @@
-- name: Frontend configuration
-  hosts: frontend
-  become: yes
-  tasks:
-  - name: installing nginx
-    ansible.builtin.package:
-      name: nginx
-      state: absent

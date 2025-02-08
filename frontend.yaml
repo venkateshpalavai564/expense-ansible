@@ -5,11 +5,6 @@
   - name: installing nginx
     ansible.builtin.package:
       name: nginx
-      state: absent
-      
-  - name: installing nginx
-    ansible.builtin.package:
-      name: nginx
       state: installed
   
   - name: start and enable the nginx
