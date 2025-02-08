@@ -10,8 +10,11 @@
 
   - name: Installing the nodejs
     ansible.builtin.package:
-      name: nodejs
+      name: "{{ item }}"
       state: installed
+    loop:
+      - nodejs
+      - mysql
 
   - name: installing PyMySQL and cryptography
     ansible.builtin.pip:
