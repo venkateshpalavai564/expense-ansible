@@ -2,14 +2,14 @@
   hosts: frontend
   become: yes
   tasks:
-  - name: installing ngnix
+  - name: installing nginx
     ansible.builtin.package:
-      name: ngnix
+      name: nginx
       state: installed
   
-  - name: start and enable the ngnix
+  - name: start and enable the nginx
     ansible.builtin.service:
-      name: ngnix
+      name: nginx
       start: started
       enable: yes
   
