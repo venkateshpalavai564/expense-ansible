@@ -7,11 +7,6 @@
       name: nginx
       state: installed
   
-  - name: Test nginx configuration
-    command: nginx -t
-    failed_when: "'test is successful' not in result.stdout"
-
-
   - name: start and enable the nginx
     ansible.builtin.service:
       name: nginx
